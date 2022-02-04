@@ -36,9 +36,8 @@ torrents = ip.get_torrents()
 # TODO Optimise this
 raw_torrents = list()
 for t in torrents:
-    title = "N/A" if len(t.title) == 0 else t.title
     raw_torrents.append([
-        t.first_seen, t.last_seen, t.category, title, t.size
+        t.first_seen, t.last_seen, t.category, t.title, t.size
     ])
 raw_torrents.reverse()
 
