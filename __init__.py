@@ -3,8 +3,8 @@ import argparse
 from tabulate import tabulate
 
 # Argparser stuff
-parser = argparse.ArgumentParser(description='query iknowwhatyoudownload (ikwyd) while in a command line interface')
-parser.add_argument('ip_addr', nargs="?", type=str, help='the ip which you would like to query', default=str())
+parser = argparse.ArgumentParser(description='Query iknowwhatyoudownload (ikwyd) while in a command line interface')
+parser.add_argument('ip_addr', nargs="?", type=str, help='The ip which you would like to query', default=str())
 
 args = parser.parse_args()
 
