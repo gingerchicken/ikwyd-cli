@@ -7,7 +7,7 @@ from ipaddress import IPv4Address, ip_address
 
 # Argparser stuff
 parser = argparse.ArgumentParser(description='Query iknowwhatyoudownload (ikwyd) while in a command line interface')
-parser.add_argument('ip_addr', nargs="?", type=str, help='The ip which you would like to query', default=str())
+parser.add_argument('ip_addr', nargs="?", type=str, help='The ip which you would like to query, leave blank for your own IP', default=str())
 
 args = parser.parse_args()
 
