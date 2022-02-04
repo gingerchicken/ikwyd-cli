@@ -1,6 +1,9 @@
 import ikwyd
 import argparse
+import sys
+
 from tabulate import tabulate
+from ipaddress import IPv4Address, ip_address
 
 # Argparser stuff
 parser = argparse.ArgumentParser(description='Query iknowwhatyoudownload (ikwyd) while in a command line interface')
@@ -10,6 +13,15 @@ args = parser.parse_args()
 
 # Get the IP Address
 raw_addr = args.ip_addr.strip()
+
+# Check it is an actual IPv4 Address
+try:
+    if len(raw_addr) > 0 and type(ip_address(raw_addr)) is not IPv4Address:
+        raise ValueError()
+except ValueError:
+    sys.stderr.write("ERROR: Expected IPv4 address, received something else.\n")
+    exit(1)
+
 ip = ikwyd.IP(raw_addr)
 
 # Give a more descriptive message
