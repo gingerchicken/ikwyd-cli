@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import ikwyd
 import argparse
 import sys
