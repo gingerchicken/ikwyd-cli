@@ -7,7 +7,7 @@
 A simple CLI application wrapper for [I Know What You Download](https://iknowwhatyoudownload.com/), a site used to view torrents distributed from a given IP address.
 
 ## Installation
-It is a small Python script, so to install it you should use pip via the following command:
+It is a small Python script, so to install the required dependencies you should use pip via the following command:
 
 ```bash
 pip3 install -r requirements.txt
