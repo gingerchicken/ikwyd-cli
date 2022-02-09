@@ -43,9 +43,12 @@ for t in torrents:
     ])
 raw_torrents.reverse()
 
-# Show the list
-print(tabulate(
-    raw_torrents, headers=["First Seen", "Last Seen", "Category", "Title", "Size"]
-))
+total_torrents = len(raw_torrents)
+
 print(f"There were {total_torrents} torrent(s) detected on your IP address")
 
+if total_torrents > 0:
+    # Show the list
+    print(tabulate(
+        raw_torrents, headers=["First Seen", "Last Seen", "Category", "Title", "Size"]
+    ))
