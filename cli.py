@@ -47,3 +47,5 @@ raw_torrents.reverse()
 print(tabulate(
     raw_torrents, headers=["First Seen", "Last Seen", "Category", "Title", "Size"]
 ))
+print(f"There were {total_torrents} torrent(s) detected on your IP address")
+
