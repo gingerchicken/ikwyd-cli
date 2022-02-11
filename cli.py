@@ -45,7 +45,7 @@ raw_torrents.reverse()
 
 total_torrents = len(raw_torrents)
 
-print(f"There were {total_torrents} torrent(s) detected on your IP address")
+print(f"There were {total_torrents} torrent(s) detected being distributed from your IP address")
 
 if total_torrents > 0:
     # Show the list
